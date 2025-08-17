@@ -1,0 +1,28 @@
+.attendance-page {
+  color: #e5e7eb;
+}
+
+.camera-box {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1e293b;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 8px;
+  border: 1px solid #374151;
+  text-align: center;
+}
+
+.att-photo {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+}

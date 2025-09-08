@@ -1,5 +1,5 @@
 .attendance-page {
-  color: #e5e7eb;
+  color: #000000;
 }
 
 .camera-box {
@@ -9,20 +9,36 @@
 }
 
 .attendance-table {
-  width: 100%;
+  width: 100%; /* full width to match header & filters */
+  margin: 20px; /* same margin as header & filters */
   border-collapse: collapse;
-  background: #1e293b;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .attendance-table th,
 .attendance-table td {
-  padding: 8px;
-  border: 1px solid #374151;
-  text-align: center;
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.attendance-table th {
+  background: #eae7dc;
+  font-weight: 600;
+  color: #444;
+}
+
+.attendance-table tr:last-child td {
+  border-bottom: none; /* remove border on last row */
 }
 
 .att-photo {
-  width: 30px;
-  height: 30px;
-  border-radius: 3px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 30%;
 }

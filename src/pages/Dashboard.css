@@ -1,6 +1,6 @@
 .dashboard-page {
-  color: #e5e7eb;
-  padding: 20px;
+  color: #000000;
+  padding: 3px;
 }
 
 /* Grid for Stats */
@@ -35,54 +35,61 @@
   margin-top: 10px;
 }
 
-.stat-card.total { border-left: 5px solid #3b82f6; }
-.stat-card.present { border-left: 5px solid #22c55e; }
-.stat-card.absent { border-left: 5px solid #ef4444; }
-.stat-card.monthly { border-left: 5px solid #facc15; }
-
 /* Filters */
-.filters {
-  margin: 20px 0;
+.filter {
   display: flex;
-  gap: 15px;
+  gap: 12px;
+  padding: 15px 20px;
+  background: #f0efeb;
+  border-radius: 10px; /* 🔹 rounded search row */
+  margin-top: 20px; /* 🔹 align with header and table */
 }
 
-.filters select {
+.filter select {
   padding: 6px 12px;
   border-radius: 6px;
   border: none;
   outline: none;
-  background: #111827;
+  background: #8e8d89;
   color: #e5e7eb;
-  border: 1px solid #374151;
 }
 
 /* Dashboard Table (unified style with Employees & Attendance) */
 .dashboard-table {
-  width: 100%;
+  width: 100%; /* full width to match header & filters */
+  margin: 20px; /* same margin as header & filters */
   border-collapse: collapse;
-  background: #1e293b;
-  border-radius: 8px;
+  background: #fff;
+  border-radius: 10px;
   overflow: hidden;
-  margin-top: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .dashboard-table th,
 .dashboard-table td {
-  padding: 12px;
-  border: 1px solid #374151;
-  text-align: center;
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
 }
 
 .dashboard-table th {
-  background-color: #111827;
-  color: #9ca3af;
-  font-weight: bold;
+  background: #eae7dc;
+  font-weight: 600;
+  color: #444;
 }
 
-.dashboard-table tr:hover {
-  background-color: #2d3748;
+.dashboard-table tr:last-child td {
+  border-bottom: none; /* remove border on last row */
 }
+
+.dashboard-photo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 30%;
+}
+
 
 /* Status Colors */
 .status-present {
@@ -101,4 +108,102 @@
   height: 5px;
   border-radius: 4px;
   object-fit: cover;
+}
+.log-photo{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #374151;
+}
+.emp-photo-small{
+  height: 30px;
+  width: 40px;
+}
+
+/* Main container with shadow */
+.stats-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Left side (stat boxes in a row) */
+.stats-boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  flex: 2;
+}
+
+/* Stat card styling */
+.stat-card {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h3 {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.stat-number {
+  font-size: 22px;
+  font-weight: bold;
+  color: #111827;
+}
+
+/* Right side (graph container) */
+.attendance-meter {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.attendance-meter-value {
+  margin-top: -150px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #8e8d89;
+}
+
+.attendance-meter h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #1f2937;
+}
+.weekly-bar-chart {
+  flex: 2;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.graphs-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.weekly-bar-chart h3 {
+  margin-bottom: 15px;
+  color: #111827;
 }

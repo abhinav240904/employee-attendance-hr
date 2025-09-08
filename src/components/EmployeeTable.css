@@ -1,0 +1,9 @@
+.table { width:100%; border-collapse:collapse; background:transparent; }
+.table thead { background:#071428; }
+.table th, .table td { padding:10px 12px; border-bottom:1px solid #1f2937; text-align:left; color:#e5e7eb; }
+.emp-photo { width:44px; height:44px; border-radius:50%; object-fit:cover; border:1px solid #374151; }
+.emp-placeholder { width:44px; height:44px; border-radius:50%; background:#071021; border:1px solid #374151; }
+.row-actions { display:flex; gap:8px; }
+.badge { padding:4px 8px; border-radius:999px; font-size:12px; border:1px solid #374151; }
+.badge.success { border-color:#14532d; color:#86efac; background:#052e16; }
+.badge.warn { border-color:#7c2d12; color:#fdba74; background:#1f0a00; }

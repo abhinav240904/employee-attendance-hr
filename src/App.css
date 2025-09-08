@@ -1,1 +1,3 @@
-.app { display: flex; } .main { flex: 1; padding: 20px; } .card { background:#1e293b; padding:16px; border-radius:8px; margin-top:10px; }
+.app { display: flex; } 
+.main { flex: 1; padding: 20px; background-color: white; color: black;} 
+.card { background:#ffffff; padding:16px; border-radius:8px; margin-top:10px; }
